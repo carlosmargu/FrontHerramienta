@@ -1,8 +1,110 @@
 <style>
+  .carousel-fade .carousel-inner .item {
 
 
 
-    .carousel-fade .carousel-inner .item {
+    opacity: 0;
+
+
+
+    transition-property: opacity;
+
+
+
+  }
+
+
+
+
+
+
+
+  .carousel-fade .carousel-inner .active {
+
+
+
+    opacity: 1;
+
+
+
+  }
+
+
+
+
+
+
+
+  .carousel-fade .carousel-inner .active.left,
+
+
+
+  .carousel-fade .carousel-inner .active.right {
+
+
+
+    left: 0;
+
+
+
+    opacity: 0;
+
+
+
+    z-index: 1;
+
+
+
+  }
+
+
+
+
+
+
+
+  .carousel-fade .carousel-inner .next.left,
+
+
+
+  .carousel-fade .carousel-inner .prev.right {
+
+
+
+    opacity: 1;
+
+
+
+  }
+
+
+
+
+
+
+
+  .carousel-fade .carousel-control {
+
+
+
+    z-index: 2;
+
+
+
+  }
+
+
+
+  @media all and (transform-3d),
+  (-webkit-transform-3d) {
+
+
+
+    .carousel-fade .carousel-inner>.item.next,
+
+
+
+    .carousel-fade .carousel-inner>.item.active.right {
 
 
 
@@ -10,7 +112,11 @@
 
 
 
-      transition-property: opacity;
+      -webkit-transform: translate3d(0, 0, 0);
+
+
+
+      transform: translate3d(0, 0, 0);
 
 
 
@@ -18,35 +124,11 @@
 
 
 
+    .carousel-fade .carousel-inner>.item.prev,
 
 
 
-
-    .carousel-fade .carousel-inner .active {
-
-
-
-      opacity: 1;
-
-
-
-    }
-
-
-
-
-
-
-
-    .carousel-fade .carousel-inner .active.left,
-
-
-
-    .carousel-fade .carousel-inner .active.right {
-
-
-
-      left: 0;
+    .carousel-fade .carousel-inner>.item.active.left {
 
 
 
@@ -54,7 +136,11 @@
 
 
 
-      z-index: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+
+
+
+      transform: translate3d(0, 0, 0);
 
 
 
@@ -62,15 +148,15 @@
 
 
 
+    .carousel-fade .carousel-inner>.item.next.left,
 
 
 
-
-    .carousel-fade .carousel-inner .next.left,
-
+    .carousel-fade .carousel-inner>.item.prev.right,
 
 
-    .carousel-fade .carousel-inner .prev.right {
+
+    .carousel-fade .carousel-inner>.item.active {
 
 
 
@@ -78,19 +164,11 @@
 
 
 
-    }
+      -webkit-transform: translate3d(0, 0, 0);
 
 
 
-
-
-
-
-    .carousel-fade .carousel-control {
-
-
-
-      z-index: 2;
+      transform: translate3d(0, 0, 0);
 
 
 
@@ -98,219 +176,216 @@
 
 
 
-    @media all and (transform-3d), (-webkit-transform-3d) {
+  }
 
 
 
-        .carousel-fade .carousel-inner > .item.next,
+  .carousel-caption {
 
 
 
-        .carousel-fade .carousel-inner > .item.active.right {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .9);
 
 
 
-          opacity: 0;
+    font-size: 17px
+  }
 
 
 
-          -webkit-transform: translate3d(0, 0, 0);
 
 
 
-                  transform: translate3d(0, 0, 0);
 
 
 
-        }
 
 
+  .carousel,
 
-        .carousel-fade .carousel-inner > .item.prev,
 
 
+  .carousel-inner,
 
-        .carousel-fade .carousel-inner > .item.active.left {
 
 
+  .carousel-inner .item {
 
-          opacity: 0;
 
 
+    height: 500px;
 
-          -webkit-transform: translate3d(0, 0, 0);
 
 
+    width: 100%;
 
-                  transform: translate3d(0, 0, 0);
 
 
 
-        }
 
 
 
-        .carousel-fade .carousel-inner > .item.next.left,
 
 
 
-        .carousel-fade .carousel-inner > .item.prev.right,
 
+  }
 
 
-        .carousel-fade .carousel-inner > .item.active {
 
+  .item:nth-child(1) {
 
 
-          opacity: 1;
 
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/1.jpg");
 
 
-          -webkit-transform: translate3d(0, 0, 0);
 
+    background-size: cover;
 
 
-                  transform: translate3d(0, 0, 0);
 
+    background-position: center center;
 
 
-        }
 
+    background-repeat: no-repeat;
 
 
-    }
 
+  }
 
 
-    .carousel-caption {
 
 
 
-        text-shadow: 0 1px 4px rgba(0,0,0,.9);
 
 
+  .item:nth-child(2) {
 
-      font-size:17px
 
 
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/2.jpg");
 
-    }
 
 
+    background-size: cover;
 
 
 
+    background-position: center center;
 
 
 
+    background-repeat: no-repeat;
 
 
 
-        .carousel,
+  }
 
 
 
-        .carousel-inner,
 
 
 
-        .carousel-inner .item {
 
+  .item:nth-child(3) {
 
 
-          height: 500px;
 
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/3.JPG");
 
 
-          width: 100%;
 
+    background-size: cover;
 
 
 
+    background-position: center center;
 
 
 
+    background-repeat: no-repeat;
 
 
 
 
-        }
 
 
 
-        .item:nth-child(1) {
+  }
 
 
 
-          background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/1.jpg");
+  .item:nth-child(4) {
 
 
 
-      background-size: cover;
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/4.JPG");
 
 
 
-      background-position: center center;
+    background-size: cover;
 
 
 
-      background-repeat: no-repeat;
+    background-position: center center;
 
 
 
-        }
+    background-repeat: no-repeat;
 
 
 
+  }
 
 
 
+  .item:nth-child(5) {
 
-        .item:nth-child(2) {
 
 
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/5.JPG");
 
-          background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/2.jpg");
 
 
+    background-size: cover;
 
-      background-size: cover;
 
 
+    background-position: center center;
 
-      background-position: center center;
 
 
+    background-repeat: no-repeat;
 
-      background-repeat: no-repeat;
 
 
+  }
 
-        }
 
 
 
 
 
 
+  .border {
 
-        .item:nth-child(3) {
 
 
+    border-style: solid;
 
-          background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/3.JPG");
 
 
+    border-color: black;
 
-      background-size: cover;
 
 
+  }
 
-      background-position: center center;
 
 
 
-      background-repeat: no-repeat;
 
 
 
@@ -318,87 +393,7 @@
 
 
 
-        }
-
-
-
-        .item:nth-child(4) {
-
-
-
-          background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/4.JPG");
-
-
-
-      background-size: cover;
-
-
-
-      background-position: center center;
-
-
-
-      background-repeat: no-repeat;
-
-
-
-        }
-
-
-
-        .item:nth-child(5) {
-
-
-
-          background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/5.JPG");
-
-
-
-      background-size: cover;
-
-
-
-      background-position: center center;
-
-
-
-      background-repeat: no-repeat;
-
-
-
-        }
-
-
-
-
-
-
-
-    .border{
-
-
-
-      border-style: solid;
-
-
-
-      border-color: black;
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .logoimg {
+  .logoimg {
 
 
 
@@ -422,11 +417,13 @@
 
 
 
-    }
+  }
 
 
 
-    .logoimg img { max-width: 100%; }
+  .logoimg img {
+    max-width: 100%;
+  }
 
 
 
@@ -434,7 +431,7 @@
 
 
 
-    .logocoimg {
+  .logocoimg {
 
 
 
@@ -450,11 +447,13 @@
 
 
 
-    }
+  }
 
 
 
-    .logocoimg img { max-width: 45%; }
+  .logocoimg img {
+    max-width: 45%;
+  }
 
 
 
@@ -462,7 +461,7 @@
 
 
 
-    .logodpimg {
+  .logodpimg {
 
 
 
@@ -470,7 +469,7 @@
 
     top: 30%;
 
-    left:20%;
+    left: 20%;
 
     display: block;
 
@@ -478,39 +477,43 @@
 
 
 
-    }
+  }
 
-    .logodpimg img { max-width: 130%; }
-
-
-
-
+  .logodpimg img {
+    max-width: 130%;
+  }
 
 
 
-    .logoneimg {
+
+
+
+
+  .logoneimg {
 
     position: relative;
 
     top: 30%;
 
-    left:15%;
+    left: 15%;
 
     display: block;
 
     width: 50%;
 
-    }
+  }
 
-    .logoneimg img { max-width: 150%; }
-
-
-
-
+  .logoneimg img {
+    max-width: 150%;
+  }
 
 
 
-    .arrowimg {
+
+
+
+
+  .arrowimg {
 
 
 
@@ -518,7 +521,7 @@
 
 
 
-    bottom:: 10px;
+    bottom: : 10px;
 
 
 
@@ -534,11 +537,13 @@
 
 
 
-    }
+  }
 
 
 
-    .arrowimg img { max-width: 100%; }
+  .arrowimg img {
+    max-width: 100%;
+  }
 
 
 
@@ -546,587 +551,316 @@
 
 
 
-    .card {
+  .card {
 
 
 
-      position: relative;
+    position: relative;
 
 
 
-      margin-right: 10%;
+    margin-right: 10%;
 
-      margin-left: 5%;
+    margin-left: 5%;
 
 
-
-    }
-
-
-
-    .card-corner::before {
-
-
-
-      content: '';
-
-
-
-      width: 250px;
-
-
-
-      height: 150px;
-
-
-
-      max-height: 100%;
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-      top: -10px;
-
-
-
-      left: -10px;
-
-
-
-      z-index: -1;
-
-
-
-    }
-
-
-
-    .card-corner::after {
-
-
-
-      content: '';
-
-
-
-      width: 250px;
-
-
-
-      height: 150px;
-
-
-
-      max-height: 100%;
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-      bottom: -10px;
-
-
-
-      right: -10px;
-
-
-
-      z-index: -1;
-
-
-
-    }
-
-
-
-    .card-connectors-top::before {
-
-
-
-      content: '';
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-      width: 20px;
-
-
-
-      height: 5px;
-
-
-
-      top: 40px;
-
-
-
-      border-radius: 0 2.5px 2.5px 0;
-
-
-
-    }
-
-
-
-    .card-connectors-top::after {
-
-
-
-      content: '';
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-      width: 5px;
-
-
-
-      height: 20px;
-
-
-
-      left: 40px;
-
-
-
-      border-radius: 0 0 2.5px 2.5px;
-
-
-
-    }
-
-
-
-    .card-connectors-bottom::before {
-
-
-
-      content: '';
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-      width: 5px;
-
-
-
-      height: 20px;
-
-
-
-      right: 40px;
-
-
-
-      bottom: 0;
-
-
-
-      border-radius: 2.5px 2.5px 0 0;
-
-
-
-    }
-
-
-
-    .card-connectors-bottom::after {
-
-
-
-      content: '';
-
-
-
-      position: absolute;
-
-
-
-      background: RGB(25,42,103);
-
-
-
-     width: 20px;
-
-
-
-      height: 5px;
-
-
-
-      bottom: 40px;
-
-
-
-      right: 0;
-
-
-
-      border-radius: 2.5px 0 0 2.5px;
-
-
-
-    }
-
-
-
-    .card-inner {
-
-
-
-      background: #fff;
-
-
-
-      padding: 3em;
-
-
-
-      z-index: 2;
-
-
-
-    }
-
-
-
-
-
-
-
-    .button1 {
-
-
-
-        background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cow.png");
-
-        background-size: 30vw 9vw;
-
-        background-repeat: no-repeat;
-
-        height: 9vw;
-
-        width: 30vw;
-
-        background-color: white;
-
-        border: none;
-
-        display: inline-block;
-
-        vertical-align: left;
-
-    }
-
-
-
-
-
-
-
-    .button1:hover{
-
-      background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cowazul.png");
-
-      background-size: 30vw 9vw;
-
-      background-repeat: no-repeat;
-
-        height: 9vw;
-
-        width: 30vw;
-
-        background-color: white;
-
-        border: none;
-
-
-
-    }
-
-
-
-    .botones:hover .tooltiptext {
-
-     visibility: visible;
-
-   }
-
-
-
-   .botones .tooltiptext {
-
-  visibility: hidden;
-
-  width: 55%;
-
-  background-color: #192a67;
-
-  color: #fff;
-
-  text-align:justify;
-
-  padding: 5px 5px;
-
-  /* Position the tooltip */
-
-  position: absolute;
-
-  z-index: 1;
-
-}
-
-
-
-
-
-
-
-    .button2 {
-
-        background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideanuevo.png");
-
-        background-size: 30vw 10vw;
-
-        background-repeat: no-repeat;
-
-        height: 10vw;
-
-        width: 30vw;
-
-        position:relative;
-
-        left: 18%;
-
-        border: none;
-
-        background-color: white;
-
-        display:block;
-
-    }
-
-
-
-
-
-
-
-    .button2:hover{
-
-      background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideaazul.png");
-
-      background-size: 30vw 10vw;
-
-      background-repeat: no-repeat;
-
-        height: 10vw;
-
-        width: 30vw;
-
-    }
-
-
-
-
-
-    .botones2:hover .tooltiptext {
-
-     visibility: visible;
-
-   }
-
-
-
-   .botones2 .tooltiptext {
-
-  visibility: hidden;
-
-  width: 500px;
-
-  background-color: #192a67;
-
-  color: #fff;
-
-  text-align:justify;
-
-  padding: 5px 5px;
-
-  /* Position the tooltip */
-
-  position: absolute;
-
-  right:15.5%;
 
   }
 
 
 
-    .button3 {
+  .card-corner::before {
 
 
 
-        background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpnuevo.png");
-
-        background-size: 47vw 10vw;
-
-        background-repeat: no-repeat;
-
-        height: 10vw;
-
-        width: 47vw;
-
-        position: relative;
-
-        left: 25%;
-
-        border: none;
-
-        background-color: white;
-
-        display:block;
-
-    }
+    content: '';
 
 
 
-
-
-    .button3:hover{
-
-
-
-      background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpazul.png");
-
-      background-size: 47vw 10vw;
-
-     background-repeat: no-repeat;
-
-        height: 10vw;
-
-        width: 47vw;
+    width: 250px;
 
 
 
-    }
+    height: 150px;
 
 
 
-    .botones3:hover .tooltiptext {
-
-     visibility: visible;
-
-   }
+    max-height: 100%;
 
 
 
-   .botones3 .tooltiptext {
+    position: absolute;
 
-  visibility: hidden;
 
-  width: 390px;
 
-  background-color: #192a67;
+    background: RGB(25, 42, 103);
 
-  color: #fff;
 
-  text-align:justify;
 
-  padding: 5px 5px;
+    top: -10px;
 
-  /* Position the tooltip */
 
-  position: absolute;
 
-  z-index: 1;
+    left: -10px;
 
+
+
+    z-index: -1;
+
+
+
+  }
+
+
+
+  .card-corner::after {
+
+
+
+    content: '';
+
+
+
+    width: 250px;
+
+
+
+    height: 150px;
+
+
+
+    max-height: 100%;
+
+
+
+    position: absolute;
+
+
+
+    background: RGB(25, 42, 103);
+
+
+
+    bottom: -10px;
+
+
+
+    right: -10px;
+
+
+
+    z-index: -1;
+
+
+
+  }
+
+
+
+  .card-connectors-top::before {
+
+
+
+    content: '';
+
+
+
+    position: absolute;
+
+
+
+    background: RGB(25, 42, 103);
+
+
+
+    width: 20px;
+
+
+
+    height: 5px;
+
+
+
+    top: 40px;
+
+
+
+    border-radius: 0 2.5px 2.5px 0;
+
+
+
+  }
+
+
+
+  .card-connectors-top::after {
+
+
+
+    content: '';
+
+
+
+    position: absolute;
+
+
+
+    background: RGB(25, 42, 103);
+
+
+
+    width: 5px;
+
+
+
+    height: 20px;
+
+
+
+    left: 40px;
+
+
+
+    border-radius: 0 0 2.5px 2.5px;
+
+
+
+  }
+
+
+
+  .card-connectors-bottom::before {
+
+
+
+    content: '';
+
+
+
+    position: absolute;
+
+
+
+    background: RGB(25, 42, 103);
+
+
+
+    width: 5px;
+
+
+
+    height: 20px;
+
+
+
+    right: 40px;
+
+
+
+    bottom: 0;
+
+
+
+    border-radius: 2.5px 2.5px 0 0;
+
+
+
+  }
+
+
+
+  .card-connectors-bottom::after {
+
+
+
+    content: '';
+
+
+
+    position: absolute;
+
+
+
+    background: RGB(25, 42, 103);
+
+
+
+    width: 20px;
+
+
+
+    height: 5px;
+
+
+
+    bottom: 40px;
+
+
+
+    right: 0;
+
+
+
+    border-radius: 2.5px 0 0 2.5px;
+
+
+
+  }
+
+
+
+  .card-inner {
+
+
+
+    background: #fff;
+
+
+
+    padding: 3em;
+
+
+
+    z-index: 2;
+
+
+
+  }
+
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: white;
+  padding: 1%;
 }
 
 
 
-    .button4 {
+  .button1 {
 
 
 
-        background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/en.png");
+    background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cow.png");
 
-        background-size: 55vw 10vw;
+    background-size: 30vw 9vw;
 
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
-        height: 10vw;
+    height: 9vw;
 
-        width: 55vw;
+    width: 30vw;
 
-        position: relative;
+    background-color: white;
 
-        left: 40%;
+    border: none;
 
-        border: none;
+    display: inline-block;
 
-        background-color: white;
+    vertical-align: left;
 
-        display:block;
-
-    }
-
-
-
-
-
-
-
-    .button4:hover{
-
-
-
-      background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/enazul.png");
-
-      background-size: 55vw 10vw;
-
-      background-repeat: no-repeat;
-
-        height: 10vw;
-
-        width: 55vw;
-
-
-
-    }
+  }
 
 
 
@@ -1134,7 +868,285 @@
 
 
 
-    .garzaimg {
+  .button1:hover {
+
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cowazul.png");
+
+    background-size: 30vw 9vw;
+
+    background-repeat: no-repeat;
+
+    height: 9vw;
+
+    width: 30vw;
+
+    background-color: white;
+
+    border: none;
+
+
+
+  }
+
+
+
+  .botones:hover .tooltiptext {
+
+    visibility: visible;
+
+  }
+
+
+
+  .botones .tooltiptext {
+
+    visibility: hidden;
+
+    width: 55%;
+
+    background-color: #192a67;
+
+    color: #fff;
+
+    text-align: justify;
+
+    padding: 5px 5px;
+
+    /* Position the tooltip */
+
+    position: absolute;
+
+    z-index: 1;
+
+  }
+
+
+
+
+
+
+
+  .button2 {
+
+    background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideanuevo.png");
+
+    background-size: 30vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 30vw;
+
+    position: relative;
+
+    left: 18%;
+
+    border: none;
+
+    background-color: white;
+
+    display: block;
+
+  }
+
+
+
+
+
+
+
+  .button2:hover {
+
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideaazul.png");
+
+    background-size: 30vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 30vw;
+
+  }
+
+
+
+
+
+  .botones2:hover .tooltiptext {
+
+    visibility: visible;
+
+  }
+
+
+
+  .botones2 .tooltiptext {
+
+    visibility: hidden;
+
+    width: 55%;
+
+    background-color: #192a67;
+
+    color: #fff;
+
+    text-align: justify;
+
+    padding: 5px 5px;
+
+    /* Position the tooltip */
+
+    position: absolute;
+    
+
+    left: 50%;
+    bottom: 73%;
+
+  }
+
+
+
+  .button3 {
+
+
+
+    background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpnuevo.png");
+
+    background-size: 47vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 47vw;
+
+    position: relative;
+
+    left: 25%;
+
+    border: none;
+
+    background-color: white;
+
+    display: block;
+
+  }
+
+
+
+
+
+  .button3:hover {
+
+
+
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpazul.png");
+
+    background-size: 47vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 47vw;
+
+
+
+  }
+
+
+
+  .botones3:hover .tooltiptext {
+
+    visibility: visible;
+
+  }
+
+
+
+  .botones3 .tooltiptext {
+
+    visibility: hidden;
+
+    width: 390px;
+
+    background-color: #192a67;
+
+    color: #fff;
+
+    text-align: justify;
+
+    padding: 5px 5px;
+
+    /* Position the tooltip */
+
+    position: absolute;
+
+    z-index: 1;
+
+  }
+
+
+
+  .button4 {
+
+
+
+    background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/en.png");
+
+    background-size: 55vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 55vw;
+
+    position: relative;
+
+    left: 40%;
+
+    border: none;
+
+    background-color: white;
+
+    display: block;
+
+  }
+
+
+
+
+
+
+
+  .button4:hover {
+
+
+
+    background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/enazul.png");
+
+    background-size: 55vw 10vw;
+
+    background-repeat: no-repeat;
+
+    height: 10vw;
+
+    width: 55vw;
+
+
+
+  }
+
+
+
+
+
+
+
+  .garzaimg {
 
 
 
@@ -1154,11 +1166,13 @@
 
 
 
-    }
+  }
 
 
 
-    .garzaimg img { max-width: 100%; }
+  .garzaimg img {
+    max-width: 100%;
+  }
 
 
 
@@ -1166,7 +1180,7 @@
 
 
 
-    .unisabanaimg {
+  .unisabanaimg {
 
 
 
@@ -1174,25 +1188,27 @@
 
     right: 0%;
 
-    bottom:70%;
+    bottom: 70%;
 
     display: block;
 
     width: 250px;
 
-    }
+  }
 
-    .unisabanaimg img { max-width: 100%; }
-
-
-
-
+  .unisabanaimg img {
+    max-width: 100%;
+  }
 
 
 
 
 
-    .botonCar {
+
+
+
+
+  .botonCar {
 
 
 
@@ -1232,7 +1248,7 @@
 
 
 
-    left:50%;
+    left: 50%;
 
 
 
@@ -1244,11 +1260,11 @@
 
 
 
-    }
+  }
 
 
 
-    .botonCar:hover {
+  .botonCar:hover {
 
 
 
@@ -1268,11 +1284,11 @@
 
 
 
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 
 
 
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 
 
 
@@ -1280,7 +1296,7 @@
 
 
 
-    }
+  }
 
 
 
@@ -1288,39 +1304,39 @@
 
 
 
-    .carousel-caption h3 {
+  .carousel-caption h3 {
 
 
 
-      font-size: 50px;
+    font-size: 50px;
 
 
 
-      font-family: 'Baloo Tamma 2';
+    font-family: 'Baloo Tamma 2';
 
 
 
-      font-style: normal;
+    font-style: normal;
 
 
 
-      text-shadow: -1px 1px 0 #000,
+    text-shadow: -1px 1px 0 #000,
 
 
 
-                              2px 2px 0 #000,
+      2px 2px 0 #000,
 
 
 
-                             2px -2px 0 #000;
+      2px -2px 0 #000;
 
 
 
-                            -2px -2px 0 #000;
+    -2px -2px 0 #000;
 
 
 
-    }
+  }
 
 
 
@@ -1328,19 +1344,19 @@
 
 
 
-    .parr2 {
+  .parr2 {
 
 
 
-      font-family: 'Baloo Tamma 2', cursive;
+    font-family: 'Baloo Tamma 2', cursive;
 
 
 
-      font-size: 35px;
+    font-size: 35px;
 
 
 
-      font-weight: bold;
+    font-weight: bold;
 
 
 
@@ -1348,7 +1364,7 @@
 
 
 
-    }
+  }
 
 
 
@@ -1356,59 +1372,56 @@
 
 
 
-    .parr {
+  .parr {
 
-      font-family: 'Baloo Tamma 2', cursive;
-      font-size: 25px;
-      text-align: justify;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 25px;
+    text-align: justify;
 
-    }
+  }
 
-    .caption {
+  .caption {
 
-      font-family: 'Baloo Tamma 2', cursive;
-      font-size: 17px;
-      text-align: justify;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 17px;
+    text-align: justify;
 
-    }
+  }
+</style>
 
 
 
-  </style>
 
 
 
 
 
 
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 
 
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
 
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+<script>
 
 
 
-  <script>
+  $('#carouselFade').carousel();
 
 
 
-    $('#carouselFade').carousel();
-
-
-
-  </script>
+</script>
 
 
 
@@ -1436,47 +1449,41 @@
 
 
 
-          <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox">
 
 
 
-              <div class="item active border">
+          <div class="item active border">
 
 
 
-                    <div class="logoimg">
+            <div class="logoimg">
 
 
 
-                      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/logolab.png" alt="logo">
+              <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/logolab.png"
+                alt="logo">
 
 
 
-                    </div>
+            </div>
 
 
 
-                    <div class="carousel-caption">
+            <div class="carousel-caption">
 
 
 
-                    <h3>Explora Nuestros Laboratorios</h3>
+              <h3>Explora Nuestros Laboratorios</h3>
 
 
 
-                    <div class="arrowimg">
+              <div class="arrowimg">
 
 
 
-                      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrow.png" alt="logo">
-
-
-
-                    </div>
-
-
-
-                  </div>
+                <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrow.png"
+                  alt="logo">
 
 
 
@@ -1484,131 +1491,7 @@
 
 
 
-              <div class="item border">
-
-
-
-                <div class="logocoimg">
-
-
-
-                  <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cowfondonegro.png" alt="logo">
-
-
-
-                </div>
-
-
-
-                  <div class="button_cont" align="center">
-
-
-
-                    <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx" target="_blank">AGENDAR</a>
-
-
-
-                  </div>
-
-
-
-              </div>
-
-
-
-              <div class="item border">
-
-
-
-                <div class="logocoimg">
-
-
-
-                  <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideafondonegro.png" alt="logo">
-
-
-
-                </div>
-
-
-
-                <div class="button_cont" align="center">
-
-
-
-                  <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx" target="_blank">AGENDAR</a>
-
-
-
-                </div>
-
-
-
-              </div>
-
-
-
-              <div class="item border">
-
-
-
-                <div class="logodpimg">
-
-
-
-                  <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpfondonegro.png" alt="logo">
-
-
-
-                </div>
-
-
-
-                <div class="button_cont" align="center">
-
-
-
-                  <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx" target="_blank">AGENDAR</a>
-
-
-
-                </div>
-
-
-
-              </div>
-
-
-
-              <div class="item border">
-
-
-
-                <div class="logoneimg">
-
-
-
-                  <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/enfondonegro.png" alt="logo">
-
-
-
-                </div>
-
-
-
-                <div class="button_cont" align="center">
-
-
-
-                  <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx" target="_blank">AGENDAR</a>
-
-
-
-                </div>
-
-
-
-             </div>
+            </div>
 
 
 
@@ -1616,39 +1499,181 @@
 
 
 
+          <div class="item border">
+
+
+
+            <div class="logocoimg">
+
+
+
+              <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cowfondonegro.png"
+                alt="logo">
+
+
+
+            </div>
+
+
+
+            <div class="button_cont" align="center">
+
+
+
+              <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx"
+                target="_blank">AGENDAR</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="item border">
+
+
+
+            <div class="logocoimg">
+
+
+
+              <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideafondonegro.png"
+                alt="logo">
+
+
+
+            </div>
+
+
+
+            <div class="button_cont" align="center">
+
+
+
+              <a class="botonCar" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx"
+                target="_blank">AGENDAR</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="item border">
+
+
+
+            <div class="logodpimg">
+
+
+
+              <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpfondonegro.png"
+                alt="logo">
+
+
+
+            </div>
+
+
+
+            <div class="button_cont" align="center">
+
+
+
+              <a class="botonCar"
+                href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx"
+                target="_blank">AGENDAR</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="item border">
+
+
+
+            <div class="logoneimg">
+
+
+
+              <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/enfondonegro.png"
+                alt="logo">
+
+
+
+            </div>
+
+
+
+            <div class="button_cont" align="center">
+
+
+
+              <a class="botonCar"
+                href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx"
+                target="_blank">AGENDAR</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
 
 
 
 
-          <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
 
 
 
-              <span class="glyphicon glyphicon-chevron-left mybtn-black" aria-hidden="true"></span>
+        <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
 
 
 
-              <span class="sr-only">Previous</span>
+          <span class="glyphicon glyphicon-chevron-left mybtn-black" aria-hidden="true"></span>
 
 
 
-          </a>
+          <span class="sr-only">Previous</span>
 
 
 
-          <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
+        </a>
 
 
 
-              <span class="glyphicon glyphicon-chevron-right mybtn-black" aria-hidden="true"></span>
+        <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
 
 
 
-              <span class="sr-only">Next</span>
+          <span class="glyphicon glyphicon-chevron-right mybtn-black" aria-hidden="true"></span>
 
 
 
-          </a>
+          <span class="sr-only">Next</span>
+
+
+
+        </a>
 
 
 
@@ -1660,6 +1685,58 @@
 
 
 
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div class="container" style="width:100%;">
+
+
+
+  <div class="row" style="width:100%;">
+
+
+
+    <div class="col">
+
+
+
+      <br>
+
+
+
+      <div class="garzaimg">
+
+
+
+        <img src="https://portalservicios.unisabana.edu.co/manualIV/Imagenes%20Sabana/Garza/GARZA-PNG.png" alt="logo">
+
+
+
+      </div>
+
+
+
     </div>
 
 
@@ -1668,43 +1745,59 @@
 
 
 
+  <div class="row">
 
 
 
+    <div class="col-8">
 
 
 
-
-
-                <br>
-
+      <div class="card">
 
 
 
+        <div class="card-corner"></div>
 
 
 
-  <div class="container" style="width:100%;">
+        <div class="card-connectors-top"></div>
 
 
 
-    <div class="row" style="width:100%;">
+        <div class="card-connectors-bottom"></div>
 
 
 
-      <div class="col">
+        <div class="card-inner">
 
 
 
-        <br>
+          <br>
 
 
 
-        <div class="garzaimg">
+          <p class="parr">Bienvenido al Living Lab un espacio y concepto de inteligencia colectiva enfocado en la
+            construcción de ecosistemas de innovación y creatividad.
 
 
 
-          <img src="https://portalservicios.unisabana.edu.co/manualIV/Imagenes%20Sabana/Garza/GARZA-PNG.png" alt="logo">
+            Nos encargamos de darte una experiencia de servicio y acompañamiento en tu visita a este laboratorio donde
+            integramos procesos
+
+
+
+            de investigación e innovación en comunidades y entornos de la vida real. Ante la contingencia vivida por el
+            Covid-19, el Living
+
+
+
+            Lab se adapta de forma permanente de acuerdo a las necesidades actuales, y por esto; hemos habilitado
+            nuestros espacios cumpliendo
+
+
+
+            con los protocolos correspondientes.</p>
 
 
 
@@ -1720,130 +1813,98 @@
 
 
 
-    <div class="row">
-
-
-
-      <div class="col-8">
-
-
-
-        <div class="card">
-
-
-
-          <div class="card-corner"></div>
-
-
-
-          <div class="card-connectors-top"></div>
-
-
-
-          <div class="card-connectors-bottom"></div>
-
-
-
-          <div class="card-inner">
-
-
-
-            <br>
-
-
-
-            <p class="parr">Bienvenido al Living Lab un espacio y concepto de inteligencia colectiva enfocado en la construcción de ecosistemas de innovación y creatividad.
-
-
-
-              Nos encargamos de darte una experiencia de servicio y acompañamiento en tu visita a este laboratorio donde integramos procesos
-
-
-
-              de investigación e innovación en comunidades y entornos de la vida real. Ante la contingencia vivida por el Covid-19, el Living
-
-
-
-              Lab se adapta de forma permanente de acuerdo a las necesidades actuales, y por esto; hemos habilitado nuestros espacios cumpliendo
-
-
-
-              con los protocolos correspondientes.</p>
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
-    </div>
-
-
-
   </div>
 
 
 
+</div>
 
 
 
 
-   <br>
 
 
 
-  <div class="card">
-
-      <h4 class="parr2">Contamos con cuatro espacios a continuación:</h4>
-
-  </div>
+<br>
 
 
 
-  <br><br>
+<div class="card">
+
+  <h4 class="parr2">Contamos con cuatro espacios a continuación:</h4>
+
+</div>
+
+
+
+<br><br>
 
 
 
 <div class="card">
 
 
-
+<div class="grid-container">
   <div class="botones">
-        <a class="button button1" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx" target="_blank"></a>
-        <span class="tooltiptext caption">Diseñado para impulsar y fomentar la cocreación. Busca integrar a personas con distintas aptitudes para que trabajen en distintas áreas de un mismo proyecto.
-        <br><br> Capacidad: 24 Personas</span>
+    <a class="button button1" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">Diseñado para impulsar y fomentar la cocreación. Busca integrar a personas con
+      distintas aptitudes para que trabajen en distintas áreas de un mismo proyecto.
+      <br><br> Capacidad: 24 Personas</span>
   </div>
 
-  <div class="unisabanaimg">
-    <a href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Documentos%20Living%20Lab/T%C3%A9rminos%20y%20Condiciones%20de%20uso%20Living%20Lab%20Sabana_2020-2.pdf?Web=1">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/docazul.png" alt="logo"></a>
+
+  <div class="botones2">
+    <a class="button button2" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">En este espacio se busca facilitar el descubrimiento de los usos emergentes, los
+      comportamientos y las oportunidades del mercado.
+      <br><br> Capacidad: 15 Personas</span>
   </div>
+  
+</div>
+
+<!--aqui empieza-->
+  <div class="botones">
+    <a class="button button1" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">Diseñado para impulsar y fomentar la cocreación. Busca integrar a personas con
+      distintas aptitudes para que trabajen en distintas áreas de un mismo proyecto.
+      <br><br> Capacidad: 24 Personas</span>
+  </div>
+
+<!--
+  <div class="unisabanaimg">
+    <a
+      href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Documentos%20Living%20Lab/T%C3%A9rminos%20y%20Condiciones%20de%20uso%20Living%20Lab%20Sabana_2020-2.pdf?Web=1">
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/docazul.png" alt="logo"></a>
+  </div>-->
 
   <br><br>
 
   <div class="botones2">
-      <a class="button button2" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx" target="_blank"></a>
-      <span class="tooltiptext caption">En este espacio se busca facilitar el descubrimiento de los usos emergentes, los comportamientos y las oportunidades del mercado.
+    <a class="button button2" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">En este espacio se busca facilitar el descubrimiento de los usos emergentes, los
+      comportamientos y las oportunidades del mercado.
       <br><br> Capacidad: 15 Personas</span>
   </div>
-<br><br>
+  <br><br>
   <div class="botones3">
-      <a class="button button3" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx" target="_blank"></a>
-      <span class="tooltiptext caption">Es el lugar elegido para la implementación de escenarios “en vivo”, dentro de las comunidades de usuarios.
+    <a class="button button3"
+      href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">Es el lugar elegido para la implementación de escenarios “en vivo”, dentro de las
+      comunidades de usuarios.
       <br><br> Capacidad: 12 Personas</span>
   </div>
-<br><br>
+  <br><br>
   <div class="botones">
-      <a class="button button4" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx" target="_blank"></a>
-      <span class="tooltiptext caption">Está pensado para que tenga lugar la evaluación de conceptos, productos y servicios, de acuerdo con criterios socio ergonómicos, sociocognitivos y socioeconómicos.
+    <a class="button button4"
+      href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx"
+      target="_blank"></a>
+    <span class="tooltiptext caption">Está pensado para que tenga lugar la evaluación de conceptos, productos y
+      servicios, de acuerdo con criterios socio ergonómicos, sociocognitivos y socioeconómicos.
       <br><br> Capacidad: 10 Personas</span>
   </div>
 
