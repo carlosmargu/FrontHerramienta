@@ -551,7 +551,7 @@
 
   .card {
     position: relative;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-left: 5%;
   }
 
@@ -559,43 +559,15 @@
 
   .card-corner::before {
 
-
-
     content: '';
-
-
-
     width: 250px;
-
-
-
     height: 150px;
-
-
-
     max-height: 100%;
-
-
-
     position: absolute;
-
-
-
     background: RGB(25, 42, 103);
-
-
-
     top: -10px;
-
-
-
     left: -10px;
-
-
-
     z-index: -1;
-
-
 
   }
 
@@ -603,40 +575,14 @@
 
   .card-corner::after {
 
-
-
     content: '';
-
-
-
     width: 250px;
-
-
-
     height: 150px;
-
-
-
     max-height: 100%;
-
-
-
     position: absolute;
-
-
-
     background: RGB(25, 42, 103);
-
-
-
     bottom: -10px;
-
-
-
     right: -10px;
-
-
-
     z-index: -1;
 
 
@@ -822,19 +768,16 @@
     grid-template-columns: auto auto;
     background-color: white;
     padding: 1%;
-    grid-gap: 10%;
+
   }
-  .grid-container2{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: white;
-    padding: 1%;
-    margin-left: 30%;
-    margin-top: 18%;
-    max-width: 100%;
-    height: auto;
-    grid-gap: 30%;
-  }
+
+  .container-flex {
+  align-items: center;
+  display:grid;
+  grid-template-columns: auto auto;
+  margin-right:5%;
+}
+
 
 
 
@@ -891,7 +834,7 @@
   .botones .tooltiptext {
 
     visibility: hidden;
-    width: 70%;
+    width: 100%;
     background-color: #192a67;
     color: #fff;
     text-align: justify;
@@ -912,7 +855,7 @@
     color: #fff;
     text-align: justify;
     padding: 5px 5px;
-    margin-left: 5%;
+
 
   }
 
@@ -1608,115 +1551,30 @@
 
 
 
-<div class="container" style="width:100%;">
 
-
-
-  <div class="row" style="width:100%;">
-
-
-
-    <div class="col">
-
-
-
-      <br>
-
-
-
-      <div class="garzaimg">
-
-
-
-        <img src="https://portalservicios.unisabana.edu.co/manualIV/Imagenes%20Sabana/Garza/GARZA-PNG.png" alt="logo">
-
-
-
+  <div class="container-flex">
+    <div class="card" >
+      <div class="card-corner" ></div>
+      <div class="card-connectors-top"></div>
+      <div class="card-connectors-bottom"></div>
+      <div class="card-inner">
+        <br>
+        <p class="parr">Bienvenido al Living Lab un espacio y concepto de inteligencia colectiva enfocado en la
+          construcción de ecosistemas de innovación y creatividad.
+          Nos encargamos de darte una experiencia de servicio y acompañamiento en tu visita a este laboratorio donde
+          integramos procesos
+          de investigación e innovación en comunidades y entornos de la vida real. Ante la contingencia vivida por el
+          Covid-19, el Living
+          Lab se adapta de forma permanente de acuerdo a las necesidades actuales, y por esto; hemos habilitado
+          nuestros espacios cumpliendo
+          con los protocolos correspondientes.</p>
       </div>
-
-
-
     </div>
-
-
-
-  </div>
-
-
-
-  <div class="row">
-
-
-
-    <div class="col-8">
-
-
-
-      <div class="card">
-
-
-
-        <div class="card-corner"></div>
-
-
-
-        <div class="card-connectors-top"></div>
-
-
-
-        <div class="card-connectors-bottom"></div>
-
-
-
-        <div class="card-inner">
-
-
-
-          <br>
-
-
-
-          <p class="parr">Bienvenido al Living Lab un espacio y concepto de inteligencia colectiva enfocado en la
-            construcción de ecosistemas de innovación y creatividad.
-
-
-
-            Nos encargamos de darte una experiencia de servicio y acompañamiento en tu visita a este laboratorio donde
-            integramos procesos
-
-
-
-            de investigación e innovación en comunidades y entornos de la vida real. Ante la contingencia vivida por el
-            Covid-19, el Living
-
-
-
-            Lab se adapta de forma permanente de acuerdo a las necesidades actuales, y por esto; hemos habilitado
-            nuestros espacios cumpliendo
-
-
-
-            con los protocolos correspondientes.</p>
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
+    <div>
+      <iframe  style=""width="420" height="345" src="https://youtu.be/0z4JDcznkKs">
+      </iframe>
     </div>
-
-
-
   </div>
-
-
-
-</div>
 
 
 
@@ -1741,34 +1599,6 @@
 
 
 <div class="card">
-  <div class="grid-container2 " style="position: absolute; z-index: 1;">
-
-    <div class="arrowbajo">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowbajo.png" alt="logo">
-    </div>
-<!--Espacio en blanco-->
-    <div>
-    </div>
-
-    <div class="arrowbajo" style="-ms-transform: rotate(180deg);
-  transform: rotate(180deg);">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowbajo.png" alt="logo">
-    </div>
-
-<!--Espacio en blanco-->
-    <div>
-    </div>
-
-    <div class="arrowlado" style="-ms-transform: rotate(0deg);
-    transform: rotate(0deg);">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowlado.png" alt="logo">
-    </div>
-<!--Espacio en blanco-->
-    <div>
-    </div>
-
-
-  </div>
   <div class="grid-container">
 
     <div class="botones">
