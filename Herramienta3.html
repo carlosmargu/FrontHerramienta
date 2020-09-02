@@ -550,19 +550,9 @@
 
 
   .card {
-
-
-
     position: relative;
-
-
-
     margin-right: 10%;
-
     margin-left: 5%;
-
-
-
   }
 
 
@@ -827,12 +817,21 @@
 
 
 
-.grid-container{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: white;
-  padding: 1%;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    padding: 1%;
+    grid-gap: 10%;
+  }
+  .grid-container2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 1%;
+    margin-left: 30%;
+    margin-top: 20%;
+  }
 
 
 
@@ -861,11 +860,6 @@
   }
 
 
-
-
-
-
-
   .button1:hover {
 
     background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/cowazul.png");
@@ -887,7 +881,6 @@
   }
 
 
-
   .botones:hover .tooltiptext {
 
     visibility: visible;
@@ -904,29 +897,22 @@
   }
 
 
-    .botones2:hover .tooltiptext {
+  .botones2:hover .tooltiptext {
 
-      visibility: visible;
-    }
+    visibility: visible;
+  }
 
-    .botones2 .tooltiptext {
+  .botones2 .tooltiptext {
 
-      visibility: hidden;
-      width: 70%;
-      background-color: #192a67;
-      color: #fff;
-      text-align: justify;
-      padding: 5px 5px;
-      margin-left:5%;
+    visibility: hidden;
+    width: 70%;
+    background-color: #192a67;
+    color: #fff;
+    text-align: justify;
+    padding: 5px 5px;
+    margin-left: 5%;
 
-    }
-
-
-
-
-
-
-
+  }
 
   .button2 {
 
@@ -953,11 +939,6 @@
   }
 
 
-
-
-
-
-
   .button2:hover {
 
     background: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/ideaazul.png");
@@ -972,14 +953,6 @@
 
   }
 
-
-
-
-
-
-
-
-
   .button3 {
 
     background-image: url("https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/dpnuevo.png");
@@ -993,10 +966,6 @@
     vertical-align: left;
 
   }
-
-
-
-
 
   .button3:hover {
 
@@ -1116,9 +1085,9 @@
 
 
     position: relative;
-    display:inline-block;
+    display: inline-block;
     width: 250px;
-    margin-left:15%;
+    margin-left: 15%;
 
   }
 
@@ -1184,11 +1153,7 @@
 
     transition: all 0.3s ease 0s;
 
-
-
   }
-
-
 
   .botonCar:hover {
 
@@ -1309,64 +1274,32 @@
 
   }
 
-  .arrowlogos {
 
-    position: relative;
-    bottom:30%;
-    margin: auto;
-    display: block;
-    width: 100px;
-  }
-
-  .arrowlogos img {
-    max-width: 100%;
+  .item1 {
+    justify-content: start;
   }
 
   .arrowbajo {
-
-    position: absolute;
-    bottom:57%;
-    left:26%;
     margin: auto;
     display: block;
-    width: 40px;
+    max-width: 100%;
+    height: auto;
   }
 
   .arrowbajo img {
-    max-width: 100%;
-  }
-
-  .arrowsubo {
-
-    position: absolute;
-    bottom:57%;
-    right:55%;
-    margin: auto;
-    display: block;
-    width: 40px;
-  }
-
-  .arrowsubo img {
-    max-width: 100%;
+    height: 80px;
   }
 
   .arrowlado {
-
-    position: absolute;
-    bottom:37%;
     margin: auto;
     display: block;
-    width: 100px;
-    left:34%;
+    max-width: 100%;
+    height: auto;
   }
 
   .arrowlado img {
-    max-width: 100%;
+    width: 80px;
   }
-
-
-
-
 </style>
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -1810,61 +1743,85 @@
 
 
 <div class="card">
+  <div class="grid-container2 " style="position: absolute; z-index: 1;">
+      
+    <div class="arrowbajo">
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowbajo.png" alt="logo">
+    </div>
+<!--Espacio en blanco-->
+    <div>
+    </div>
+
+    <div class="arrowbajo" style="-ms-transform: rotate(180deg);
+  transform: rotate(180deg);">
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowbajo.png" alt="logo">
+    </div>
+    
+<!--Espacio en blanco-->
+    <div>
+    </div>
+
+    <div class="arrowlado" style="-ms-transform: rotate(0deg);
+    transform: rotate(0deg);">
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowlado.png" alt="logo">
+    </div>
+<!--Espacio en blanco-->
+    <div>
+    </div>
+
+
+  </div>
   <div class="grid-container">
-      <div class="botones">
-        <a class="button button1" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx"
-          target="_blank"></a>
-        <p class="tooltiptext caption">Diseñado para impulsar y fomentar la cocreación. Busca integrar a personas con
-          distintas aptitudes para que trabajen en distintas áreas de un mismo proyecto.
-          <br><br> Capacidad: 24 Personas</p>
-      </div>
-      <div>
-      </div>
-      <div class="botones2">
-        <a class="button button4"
-          href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx"
-          target="_blank"></a>
-        <p class="tooltiptext caption">Está pensado para que tenga lugar la evaluación de conceptos, productos y
-          servicios, de acuerdo con criterios socio ergonómicos, sociocognitivos y socioeconómicos.
-          <br><br> Capacidad: 10 Personas</p>
-      </div>
-      <div class="botones">
-        <a class="button button2" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx"
-          target="_blank"></a>
-          <p class="tooltiptext caption">En este espacio se busca facilitar el descubrimiento de los usos emergentes, los
-          comportamientos y las oportunidades del mercado.
-          <br><br> Capacidad: 15 Personas</p>
-      </div>
-      <div class="arrowlogos" style="visibility:hidden">
-        <img src="" alt="logo">
-      </div>
-      <div class="botones2">
-        <a class="button button3"
-          href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx"
-          target="_blank"></a>
-        <p class="tooltiptext caption">Es el lugar elegido para la implementación de escenarios “en vivo”, dentro de las
-          comunidades de usuarios.
-          <br><br> Capacidad: 12 Personas</p>
-      </div>
-  </div>
-  <div class="arrowbajo">
-    <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowbajo.png" alt="logo">
-  </div>
-  <div class="arrowsubo">
-    <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowsubo.png" alt="logo">
-  </div>
-  <div class="arrowlado">
-    <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/arrowlado.png" alt="logo">
+
+    <div class="botones">
+      <a class="button button1" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/coworking.aspx"
+        target="_blank"></a>
+      <p class="tooltiptext caption">Diseñado para impulsar y fomentar la cocreación. Busca integrar a personas con
+        distintas aptitudes para que trabajen en distintas áreas de un mismo proyecto.
+        <br><br> Capacidad: 24 Personas</p>
+    </div>
+
+    <div class="botones2">
+      <a class="button button4"
+        href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/search-learn-act-simulary.aspx"
+        target="_blank"></a>
+      <p class="tooltiptext caption">Está pensado para que tenga lugar la evaluación de conceptos, productos y
+        servicios, de acuerdo con criterios socio ergonómicos, sociocognitivos y socioeconómicos.
+        <br><br> Capacidad: 10 Personas</p>
+    </div>
+
+    <div class="botones">
+      <a class="button button2" href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/ideacion.aspx"
+        target="_blank"></a>
+      <p class="tooltiptext caption">En este espacio se busca facilitar el descubrimiento de los usos emergentes, los
+        comportamientos y las oportunidades del mercado.
+        <br><br> Capacidad: 15 Personas</p>
+    </div>
+
+    <div class="botones2">
+      <a class="button button3"
+        href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Paginas/observation-negociation-forecast.aspx"
+        target="_blank"></a>
+      <p class="tooltiptext caption">Es el lugar elegido para la implementación de escenarios “en vivo”, dentro de las
+        comunidades de usuarios.
+        <br><br> Capacidad: 12 Personas</p>
+    </div>
+
   </div>
 </div>
+
 <div class="card">
   <div class="unisabanaimg">
-    <a href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Documentos%20Living%20Lab/T%C3%A9rminos%20y%20Condiciones%20de%20uso%20Living%20Lab%20Sabana_2020-2.pdf?Web=1">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/terminos%20y%20condiciones.png" alt="tyc"></a>
+    <a
+      href="https://portalservicios.unisabana.edu.co/SmartLabSabana/Documentos%20Living%20Lab/T%C3%A9rminos%20y%20Condiciones%20de%20uso%20Living%20Lab%20Sabana_2020-2.pdf?Web=1">
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/terminos%20y%20condiciones.png"
+        alt="tyc"></a>
   </div>
 
   <div class="unisabanaimg">
     <a href="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/solicitudpaso.png">
-      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/pasoapaso.png" alt="paso a paso"></a>
+      <img src="https://portalservicios.unisabana.edu.co/SmartLabSabana/PublishingImages/pasoapaso.png"
+        alt="paso a paso"></a>
   </div>
 </div>
+
