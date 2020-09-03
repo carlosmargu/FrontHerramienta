@@ -111,7 +111,7 @@ body {
 .card__title {
   font-family: 'Alata', sans-serif;
   font-size: 3.5rem;
-  font-weight: 100;
+  font-weight: 200;
   margin-top: 10%;
 }
 .card__cover {
@@ -126,18 +126,20 @@ body {
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75%;
+  top: 35%;
+  left: 0%;
+  width: 100%;
+  display: inline-block;
+
 }
 .card__heading-span {
-  font-family: "VT323", monospace;
+  font-family: 'Alata', sans-serif;
   font-size: 4.2rem;
   font-weight: 300;
-  text-transform: uppercase;
+  margin-right: 50%;
   padding: 1rem 1.5rem;
   color: #fff;
+  
 }
 .card__details {
   font-family: "Inconsolata", monospace;
@@ -274,7 +276,7 @@ body {
     width: 70%;
   }
 }
-img {
+.foto {
   width: 65%;
   background: #f9f9f9;
   border: 5px solid rgba(0,0,0,.7);
@@ -283,8 +285,11 @@ img {
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 7px rgba(0,0,0,.5);
+  margin-top: 15%;
 }
 .escudo{
-  width: 10%;
+  width: 15%;
   display: block;
+  margin: 0 auto;
+
 }
