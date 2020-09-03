@@ -9,6 +9,12 @@
 .grid-container{
   display: grid;
   grid-template-columns: auto auto auto;
+  
+}
+.grid-header{
+display: grid;
+grid-template-columns: auto auto;
+
 }
 html {
   font-size: 62.5%;
@@ -117,35 +123,35 @@ body {
 .card__cover {
   position: relative;
   background-size: cover;
-  height: 14rem;
+  height: 10rem;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background:  rgba(25,42,103,1);
 }
 .card__heading {
-  text-align: center;
+  
   color: #fff;
   position: absolute;
   top: 35%;
-
   width: 100%;
 
 }
 .card__heading-span {
 
   font-family: 'Alata', sans-serif;
-  font-size: 4.2rem;
+  font-size: 250%;
   font-weight: 300;
-  padding: 1rem 1.5rem;
+  margin-left: 10%;
   color: #fff;
 
 }
 .card__details {
-  font-family: "Inconsolata", monospace;
+  font-family: 'Alata', sans-serif;
   padding: 4rem 2rem;
-  height: 73%;
+  height: 80%;
   width: 100%;
   overflow: auto;
+  text-align: justify;
 
 }
 .card__details ul {
@@ -203,20 +209,29 @@ body {
     font-size: 4rem;
   }
 }
+.botonBox{
+align-content: right;
+justify-self: center;
+margin-top: 5%;
+}
 .button {
-
-  font-size: 1em;
+  font-family: 'Alata', sans-serif;
+  font-weight: 100;
+  left: 40%;
+  top: 40%;
+  font-size: 120%;
   padding: 10px;
   color: #fff;
-  border: 2px solid #06D85F;
+  border: 2px solid #d8b46c;
   border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  
 }
 
 .button:hover {
-  background: #06D85F;
+  background: #d8b46c;
 }
 
 .overlay {
