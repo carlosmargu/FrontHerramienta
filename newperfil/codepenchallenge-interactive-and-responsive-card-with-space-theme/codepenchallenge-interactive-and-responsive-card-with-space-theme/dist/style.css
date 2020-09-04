@@ -41,13 +41,14 @@ body {
 }
 
 .artboard {
-  display: flex;
+  
   flex-flow: row;
   align-items: center;
   justify-content: center;
   padding: 4rem;
   height: 100%;
   position: relative;
+  
 
 }
 @media (max-width: 37.5em) {
@@ -111,14 +112,17 @@ body {
 .card__subject {
   font-family: 'Alata', sans-serif;
   letter-spacing: 0.8rem;
-  font-size: 2rem;
+  font-size: 150%;
   margin-bottom: 1rem;
+  text-align: center;
+  text-anchor: middle;
 }
 .card__title {
   font-family: 'Alata', sans-serif;
-  font-size: 3.5rem;
+  font-size: 300%;
   font-weight: 200;
-  margin-top: 10%;
+  margin-top: 7%;
+  
 }
 .card__cover {
   position: relative;
@@ -306,15 +310,26 @@ ul{
   background: #f9f9f9;
   border: 5px solid rgba(0,0,0,.7);
   border-radius: 10%;
-  padding: 5px;
+  padding: 0px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 7px rgba(0,0,0,.5);
   margin-top: 15%;
 }
 .escudo{
+  width: 1%;
+  display: block;
+  margin: 0 auto;
+
+}
+
+.escudo1{
   width: 15%;
   display: block;
   margin: 0 auto;
+  margin-top: 50%;
+  margin-left: 82.5%;
+  position: -webkit-sticky;
+  position: sticky;
 
 }
