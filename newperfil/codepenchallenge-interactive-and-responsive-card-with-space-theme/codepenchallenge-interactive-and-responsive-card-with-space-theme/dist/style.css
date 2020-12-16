@@ -31,14 +31,9 @@ grid-template-columns: auto auto;
   padding: 4rem;
   height: 100%;
   position: relative;
-  
+}
 
-}
-@media (max-width: 37.5em) {
-  .artboard {
-    padding: 1rem;
-  }
-}
+
 
 .card {
   flex: initial;
@@ -157,46 +152,7 @@ grid-template-columns: auto auto;
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
-@media only screen and (max-width: 37.5em), only screen and (hover: none) {
-  .card {
-    height: auto;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
-  }
-  .card__side {
-    height: auto;
-    position: relative;
-    box-shadow: none;
-  }
-  .card__side--front {
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-  }
-  .card__side--back {
-    transform: rotateY(0);
-  }
-  .card:hover .card__side--front {
-    transform: rotateY(0);
-  }
-  .card__details {
-    padding: 3rem 2rem;
-  }
-  .card__theme {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translate(0);
-    width: 100%;
-    padding: 5rem 4rem 1.5rem 4rem;
-    text-align: right;
-  }
-  .card__theme-box {
-    margin-bottom: 1.5rem;
-  }
-  .card__title {
-    font-size: 4rem;
-  }
-}
+
 .botonBox{
 align-content: right;
 justify-self: center;
@@ -280,14 +236,7 @@ ul{
   font-size: 150%;
   padding: 1rem;
 }
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
-}
+
 .foto {
   width: 65%;
   background: #f9f9f9;
